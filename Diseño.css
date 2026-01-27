@@ -1,0 +1,1394 @@
+            /*
+            Programado por: Angel Martin Morales Haro
+            */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+            /*
+            Diseño del cuerpo de pagina
+            */
+
+        html{
+            scroll-behavior: smooth;
+        }
+        body::-webkit-scrollbar{
+            background: #191919;
+            width: 12px;
+            overflow-y: scroll;
+            scroll-behavior: auto;
+
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255, .2);
+            border-radius: 10px;
+            border-right: 2px solid transparent;
+            scroll-behavior: auto;
+        }
+
+        header{
+            position: relative;
+            
+        }
+
+        
+        body::-webkit-scrollbar{
+            background: #191919;
+            width: 12px;
+
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255, .2);
+            border-radius: 10px;
+            border-right: 2px solid transparent;
+        }
+
+        header{
+            position: relative;
+            scroll-behavior: auto;
+        }
+
+        html {
+            min-height: 100%;
+             }
+    
+        body{
+            height: calc(100vh - 8em);
+            background-color: #d4d4d4;
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            }
+            
+            /*
+            Diseño del boton de navegacion
+            */
+
+        .menu{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            display: flex;
+            z-index: 1005;
+            bottom: 8px;
+        right: 16px;
+        }
+
+        .menu li{
+            position: absolute;
+            left: 0;
+            list-style: none;
+            transform-origin: 100px;
+            transition: 0.5s;
+            transition-delay: calc(0.1s * var(--i));
+            transform: rotate(0deg) translateX(80px);
+            
+        }
+
+        .menu.active li{
+            transform: rotate(calc(360deg / 8 * var(--i)));
+
+        }
+
+        .menu li a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            transform: rotate(calc(360deg / -8 * var(--i)));
+            box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+            color: #111;
+            transition: 0.5s;
+        }
+
+        .menu li a:hover{
+            color: #ff1252;
+        }
+
+        .toggle{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 4px rgba(0,0,0,0.15);
+            font-size: 2em;
+            transition: 1.25s;
+        }
+
+        .menu.active .toggle{
+            transform: rotate(315deg);
+        }
+
+
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /*
+        Contenedores principales
+        */
+        
+        .contenedor{
+            padding: 60px 0;
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .titulo{
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 35px;
+            text-align: center;
+            margin: 40px;
+            margin-bottom: 60px;
+        }
+
+        .titulog {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-size: 35px;
+            margin-bottom: 20px; /* Separación entre el título y el slider */
+            text-align: center;
+            width: 100%;
+        }
+        
+        .titulov{
+            font-family: 'Raleway', sans-serif;
+            color: #191919;
+            font-size: 35px;
+            text-align: center;
+            margin: 40px;
+            margin-bottom: 60px;
+        }
+
+        .tituloc{
+            font-family: 'Raleway', sans-serif;
+            color: #191919;
+            font-size: 35px;
+            text-align: center;
+            margin: 40px;
+            margin-bottom: 60px;
+
+        }
+
+        /*
+         Diseño del slider principal
+        */
+        #slider {
+            width: 100%;
+            height: 100vh;      
+            overflow: hidden;   
+            position: relative;
+            background-color: #000; /* Fondo negro por si algo falla */
+        }
+
+        /* Carril de imagenes */
+        #slider figure {
+            position: relative;
+            width: 500%;        /* 5 imágenes x 100% */
+            height: 100%;       
+            margin: 0;
+            left: 0;
+            display: flex;      /* Alinea las fotos en fila */
+            animation: 20s slider infinite;
+        }
+
+        /*Imágenes Individuales */
+        #slider figure img {
+            width: 20%;         /* 100% / 5 = 20% */
+            height: 100%;       
+            object-fit: cover;  
+            display: block;
+            float: left;
+            filter: brightness(60%); 
+        }
+
+        /* 4. Animación de Deslizamiento */
+        @keyframes slider {
+            0% { left: 0; }
+            20% { left: 0; }
+            25% { left: -100%; }
+            45% { left: -100%; }
+            50% { left: -200%; }
+            70% { left: -200%; }
+            75% { left: -300%; }
+            95% { left: -300%; }
+            100% { left: -400%; }
+        }
+        /*
+        Animacion del titulo principal
+        */
+
+        .texto-header {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centrado */
+            z-index: 100;
+            width: 100%; 
+            display: flex;
+            justify-content: center; /*párrafo al centro */
+        }
+
+        /* TEXTO */
+        .line {
+            /* Estilos de fuente */
+            font-family: 'Fira Code', monospace; 
+            color: white;
+            font-size: 3.5em; /* Tamaño grande */
+            
+            /* Estructura para la animación */
+            display: inline-block; /* Importante para que el width funcione bien */
+            white-space: nowrap;   /* Todo en una sola línea */
+            overflow: hidden;      /* Esconde lo que no se ha escrito aun */
+            border-right: 3px solid rgba(255, 255, 255, 0.75); /* El cursor */
+            
+            /* ESTADO INICIAL: Invisible */
+            width: 0; 
+            
+            /* LA ANIMACIÓN */
+            /* steps(13) tiene 13 caracteres. Ajustar si cambias el texto */
+            animation: typewriter 3s steps(17) 1s 1 normal both,
+                    blinkTextCursor 500ms steps(17) infinite normal;
+        }
+
+        /* 4. LOS KEYFRAMES */
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 17ch; } /* 13.5ch es el ancho de 13 letras aprox */
+        }
+
+        @keyframes blinkTextCursor {
+            from { border-right-color: rgba(255, 255, 255, 0.75); }
+            to { border-right-color: transparent; }
+        }
+
+        .header2 {
+            position: absolute;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            font-size: 60%;
+            top: 57%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+        }
+
+            /*
+            Diseño del index
+            */
+        
+        nav{
+            font-family: 'Poppins', sans-serif;
+            text-align: right;
+            font-size: 20px;
+            padding: 20px 50px 0 0;
+            position: absolute;
+            /*
+            position: fixed;
+            display: flex;
+            z-index: 10;
+            */
+
+            top: 8px;
+            right: 16px;
+        }
+        
+        nav>a{
+            color: aliceblue;
+            font-weight: 300;
+            text-decoration: none;
+            margin-right: 10px;
+            
+        }
+
+        
+        nav>a:hover{
+            text-decoration: underline;
+
+        }
+
+        .header{
+            background-color: #191919;
+        }
+
+            /*
+            Diseño del web
+            */
+
+        section #wavess {
+            position: absolute;
+            overflow: hidden ;
+        }
+        
+        div .wave{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url(wavem.png); 
+            background-size: 1000px 100px;
+        
+        }
+
+        header .waveB{
+            position: absolute;
+            z-index: 1001;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        div .wave.wave1{
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            bottom: 0;
+        }
+        
+        div .wave.wave2{
+            animation: animate2  15s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            bottom: 10px;
+        }
+        
+        div .wave.wave3{
+            animation: animate  30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            bottom: 15s;
+        }
+        
+        div .wave.wave4{
+            animation: animate2  5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            bottom: 20px;
+        }
+
+            /*
+            Animacion de la pagina web
+            */
+        
+        @keyframes animate{
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: 1000px;
+            }
+        }
+        
+        @keyframes animate2{
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: -1000px;
+            }
+        }
+
+        
+            /*
+            Animacion paralax del wave
+            */
+        
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+        }
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+        @keyframes move-forever {
+            0% {
+            transform: translate3d(-90px,0,0);
+            }
+            100% { 
+            transform: translate3d(85px,0,0);
+            }
+        }
+
+        /*Ajuste para telefono*/
+        @media (max-width: 768px) {
+            .waves {
+            height:40px;
+            min-height:40px;
+            }
+            .content {
+            height:30vh;
+            }
+            h1 {
+            font-size:24px;
+            }
+        }
+
+
+
+
+        /*.textos-header h1{
+                font-family: 'Montserrat Alternates', sans-serif;
+                font-size: 30px;
+                color: #F7F7F7;
+                position: absolute;
+                top: 200px;
+                display: flex;
+                height: 370px;
+                width: 100%;
+                align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                    animation: fade 1s;
+        }*/
+
+            /*
+            diseño del logo
+            */
+
+        .logo{
+            position: absolute;
+            margin: 25px;
+            width: 600px;
+            height: 600px;
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, 0.75);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+
+        @keyframes fade{
+            from{
+                opacity: 0;
+            }
+
+            to{
+                opacity: 1;
+            }
+        }
+
+        
+        .textos-header h2{
+            font-family: 'Montserrat Alternates', sans-serif;
+                font-size: 25px;
+                font-weight: 300;
+                color: white;
+                position: absolute;
+                top: 215px;
+                display: flex;
+                height: 430px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+
+
+        }
+
+            /*
+            wave config
+            */
+
+        .wave{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            fill: #191919;
+            
+        }
+
+            /*
+            diseño sobre nosotros
+            */
+
+
+        main .sobre-nosotros{
+            
+            padding: 40px 0 200px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            background: #191919;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /*
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            */
+            
+        }
+
+        .imagen-nosotros img {
+            width: 500px;
+            height: 500px;
+            transition: 1s;
+            
+            /* --- AGREGA ESTO --- */
+            border-radius: 50%;  /* Esto recorta las esquinas y la hace redonda */
+            object-fit: cover;   /* Asegura que la foto no se vea aplastada */
+            box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Opcional: una sombra elegante */
+        }
+
+        .imagen-nosotros:hover img{
+            transform: scale(1.10);
+        }
+
+                    /*
+            diseño del video
+            */
+
+        .video {
+            /* Activamos Flexbox para controlar todo lo de adentro */
+            display: flex;
+            flex-direction: column; /* Acomoda los elementos en columna (Título arriba, video abajo) */
+            align-items: center;    /* ESTO es lo que centra horizontalmente todo */
+            justify-content: center;
+            
+            /* Ajustes de espacio */
+            padding-bottom: 50px; /* Espacio abajo para que no pegue con lo siguiente */
+            width: 100%;
+            position: relative;
+        }
+
+        /* 2. LA CAJA DEL VIDEO (El marco) */
+        .proyecto {
+            /* Quitamos el 'position: absolute' y 'left: 25%' que causaban el error */
+            position: relative;
+            left: auto;
+            
+            /* Hacemos que el video sea responsive (se adapte al móvil) */
+            width: 90%;           /* Ocupa el 90% en celulares */
+            max-width: 640px;     /* Pero nunca más de 640px (su tamaño original) */
+            
+            /* Decoración (opcional pero recomendada) */
+            border-radius: 15px;  /* Bordes redondeados */
+            overflow: hidden;     /* Para que el video respete los bordes redondos */
+            box-shadow: 0 15px 30px rgba(0,0,0, 0.6); /* Sombra para darle profundidad */
+        }
+
+        /* 3. EL IFRAME (El video de YouTube en sí) */
+        .videop {
+            width: 100%; /* Obliga al video a llenar su caja contenedor */
+            /* Mantiene la altura, o puedes usar 'aspect-ratio: 16/9;' si quieres ser moderno */
+            height: 360px; 
+            display: block; /* Elimina espacios extraños abajo de los iframes */
+        }
+
+                    /*
+            diseño contenedor sobre nosotros
+            */
+
+
+        .contenedor-sobre-nosotros{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+
+
+        .sobre-nosotros .contenido-texto{
+            width: 48%;
+        }
+
+        .contenido-texto h3{
+            margin-bottom: 15px;
+        }
+
+        .contenido-texto h3 span{
+            font-family: 'Lato', sans-serif;
+            background: #7858a6;
+            color: black;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 0px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0, 0.5);
+            margin-right: 5px;
+        }
+
+        .contenido-texto h3{
+            font-family: 'Lato', sans-serif;
+            color: #9a0680;
+            font-size: 22px;
+        }
+
+        .contenido-texto p{
+            font-family: 'Lato', sans-serif;
+            padding: 0px 0px 30px 15px;
+            font-weight: 300;
+            text-align: justify;
+            font-size: 20px;
+            color: white;
+        }
+
+            /*
+            Contenedor del portafolio
+            */
+
+                    
+        .contenedor-portafolio {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            background-color: #191919;
+            padding: 40px 0; 
+        }
+
+        .copy img{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 950px;
+            transform: translateY(360px);
+        }
+
+        .slide-container{
+            width: 100%;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            
+        }
+        
+        .image-slider{
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .7s;
+        
+        }
+            
+        
+        .slides-div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 30px 0 30px;
+        
+        }
+        
+        .img{
+        position: relative;
+        width: 240px;
+        height: 370px;
+        transition: .5;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        filter: saturate(10%);
+        }
+        .hover-galeria{
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            transform: scale(0);
+            background: hsla(273, 91%, 27%, 0.7);
+            transition: transform 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+        
+        .hover-galeria img {
+            width: 50px;
+            border-radius: 25px;
+        
+        }
+        
+        .hover-galeria p {
+            color: #fff;
+        }
+        
+        .image-slider:hover .hover-galeria{
+            transform: scale(1);
+            position: absolute;
+            
+        }
+        
+        /* --- SLIDER--- */
+
+        .slider {
+            width: 95%;           /* Ocupa casi toda la pantalla */
+            max-width: 1000px;   
+            height: 500px;        
+            border-radius: 15px;
+            overflow: hidden;     /* Esconde lo que sobra */
+            position: relative;
+            margin: 20px auto;    /* Centrado en la página */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            background: #000;     /* Fondo negro por si tarda en cargar la imagen */
+        }
+
+        .slide input {
+            display: none; 
+        }
+
+        .slide {
+            width: 800%;   /* 8 fotos = 800% */
+            height: 100%;
+            display: flex;
+        }
+
+        .st {
+            width: 12.5%;
+            height: 100%;
+            
+            transition: margin-left 1s ease-in-out; 
+        }
+
+        .st img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Esto hace que la imagen llene el hueco sin estirarse feo */
+            display: block;
+        }
+
+        /* (Radio Buttons) */
+        #radio1:checked ~ .first { margin-left: 0%; }
+        #radio2:checked ~ .first { margin-left: -12.5%; }
+        #radio3:checked ~ .first { margin-left: -25%; }
+        #radio4:checked ~ .first { margin-left: -37.5%; }
+        #radio5:checked ~ .first { margin-left: -50%; }
+        #radio6:checked ~ .first { margin-left: -62.5%; }
+        #radio7:checked ~ .first { margin-left: -75%; }
+        #radio8:checked ~ .first { margin-left: -87.5%; }
+
+        .nav-m {
+            position: absolute;
+            bottom: 20px;         /* Pegados al fondo */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 100;         /* ¡IMPORTANTE! Para que estén encima de las fotos */
+        }
+
+        .m-btn {
+            border: 2px solid white;
+            padding: 8px;         /* Tamaño del botón */
+            border-radius: 50%;   /* Círculos perfectos */
+            cursor: pointer;
+            margin: 0 10px;
+            background: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+            transition: 0.3s;
+        }
+
+        .m-btn:hover {
+            background: #fff;     /* Se pone blanco al pasar el mouse */
+            transform: scale(1.2); /* Crece un poquito */
+        }
+
+        .nav-auto {
+            display: none; 
+        }
+        
+        
+        .button{
+            position: absolute;
+            width: 240px;
+            height: 370px;
+            transition: .5s;
+            background-color: rgba(0,0,0, .4);
+        }
+        
+        .button:hover{
+            background-color: rgba(0,0,0, .2);
+        }
+        
+        #slider-span1:target ~ .image-slider #img1,
+        #slider-span1:target ~ .image-slider #button-1{
+            width: 380px;
+            height: 585px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        #slider-span2:target ~ .image-slider #img2,
+        #slider-span2:target ~ .image-slider #button-2{
+            width: 380px;
+            height: 585px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        #slider-span3:target ~ .image-slider #img3,
+        #slider-span3:target ~ .image-slider #button-3{
+            width: 380px;
+            height: 585px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        #slider-span4:target ~ .image-slider #img4,
+        #slider-span4:target ~ .image-slider #button-4{
+            width: 380px;
+            height: 585px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        #slider-span5:target ~ .image-slider #img5,
+        #slider-span5:target ~ .image-slider #button-5{
+            width: 380px;
+            height: 585px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        #slider-span6:target ~ .image-slider #img6,
+        #slider-span6:target ~ .image-slider #button-6{
+            width: 380px;
+            height: 585px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        #slider-span7:target ~ .image-slider #img7,
+        #slider-span7:target ~ .image-slider #button-7{
+            width: 240px;
+            height: 240px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        
+        
+        #slider-span1:target ~ .image-slider{left: 70%;}
+        #slider-span2:target ~ .image-slider{left: 50%;}
+        #slider-span3:target ~ .image-slider{left: 25%;}
+        
+        #slider-span5:target ~ .image-slider{left: -25%;}
+        #slider-span6:target ~ .image-slider{left: -50%;}
+        #slider-span7:target ~ .image-slider{left: -70%;}
+        
+            /*
+            diseño de clientes
+            */
+
+        .cards{
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 150px;
+            transition: 1s;
+        }
+
+        .cards .card{
+            background: url(IMG/wood.jpg);
+            display: flex;
+            width: 46%;
+            height: 200px;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0, 0.6);
+            transition: 1s;
+        }
+
+        .cards .card img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .cards .card> .contenido-card{
+            width: 60%;
+            font-family: 'Lato', sans-serif;
+            color: #fff;
+            text-align: justify;
+        }
+
+        .cards .card> .contenido-card p{
+            font-weight: 300;
+            padding-top: 5px;
+        }
+
+
+        .cards .card2{
+            background: url(IMG/wood.jpg);
+            display: flex;
+            width: 46%;
+            height: 200px;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0, 0.6);
+            transition: 1s;
+        }
+
+        .cards .card2 img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: block;
+
+        }
+
+        .cards .card2> .contenido-card{
+            width: 60%;
+            font-family: 'Lato', sans-serif;
+            color: #fff;
+            text-align: justify;
+        }
+
+        .cards .card2> .contenido-card p{
+            font-weight: 300;
+            padding-top: 5px;
+        }
+
+        .card img{
+            transition: 1s;
+        }
+
+        .card2 img{
+            transition: 1s;
+        }
+
+        .card:hover{
+            transform: scale(1.09);
+            
+        }
+
+        .card2:hover{
+            transform: scale(1.09);
+            
+        }
+
+        .card:hover img{
+            transform: scale(1.50);
+        }
+
+        .card2:hover img{
+            transform: scale(1.50);
+        }
+
+
+        .acerca-de{
+            background: #191919;
+            padding-bottom: 30px;
+        }
+
+        .servicio-cont{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .servicio-ind{
+            width: 500px;
+            margin: 15px auto;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .servicio-ind img{
+            width: 90%;
+            height: 90%;
+            transition: all .5s;
+        }
+
+        .servicio-ind:hover img{
+            transform: scale(1.09);
+        }
+
+        .servicio-ind .cont-text{
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            top: -100%;
+            left: 0;
+            text-align: justify;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+
+        .cont-text h3{
+            text-align: center;
+            font-size: 25px;
+            border-bottom: 1px solid #363b4E;
+            padding: 0 10px 20px 10px;
+        }
+
+        .cont-text p{
+            padding: 0px 20px 15px 20px;
+            border-bottom: 1px solid #363b4E ;
+        }
+
+        .servicio-ind:hover .cont-text{
+            top: 0;
+        }
+
+            /*
+            diseño del footer
+            */
+
+ footer{
+
+      /*background: #441144;*/
+      
+      background: -webkit-linear-gradient(to bottom, #191919, #272727),
+      url(img/imgfond02.jpg);
+      
+      background: linear-gradient(to bottom,  #191919, #272727),
+      url(img/imgfond02.jpg);
+      
+      padding: 60px 0 30px 0;
+      
+      margin: auto;
+      
+      overflow: hidden;
+      
+      }
+
+      .contenedor-footer{
+
+            display: flex;
+            
+            width: 90%;
+            
+            justify-content: space-evenly;
+            
+            margin: auto;
+            
+            padding-bottom: 50px;
+            
+            border-bottom: 1px solid #ccc;
+            
+            }
+            
+            .content-foot{
+            
+            text-align: center;
+            
+            }
+            
+            .content-foot h4{
+            
+            color: #fff;
+            
+            border-bottom: 3px solid #f9f9f9;
+            
+            padding-bottom: 5px;
+            
+            margin-bottom: 10px;
+            
+            }
+
+            .content-foot p{
+                  color: #ccc;
+              }
+              
+              .titulo-final{
+                font-family: 'Lato', sans-serif;
+                  text-align: center;
+                  font-size: 20px;
+                  margin: 10px 0 0 0;
+                  color: #c3e2f5;
+              }
+              
+              footer >a{
+                  color: #363b4E;
+                  text-align: left;
+                  font-weight: 300;
+                  text-decoration: none;
+                  margin-right: 10px;
+              
+              }
+
+              @media screen and (max-width:900px){
+
+              
+                  .contenedor-sobre-nosotros{
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                  }
+              
+                  .sobre-nosotros .contenido-textos{
+                      width: 90%;
+                  }
+              
+                  .imagen-about-us{
+                      width: 90%;
+                  }
+              
+                  /*  Galeria */
+              
+                  .imagen-port{
+                      width: 44%;
+                  }
+
+
+            .servicio-ind{
+                  width: 100%;
+                  text-align: center;
+              }
+          
+              .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+                  margin-bottom: 60px;
+              }
+          
+              .servicio-ind img{
+                  width: 90%;
+              }
+            }
+
+            @media screen and (max-width:500px){
+                  nav{
+                      text-align: center;
+                      padding: 30px 0 0 0;
+                  }
+                  nav > a{
+                      margin-right: 5px;
+                  }
+              
+                  .textos-header h1{
+                      font-size: 35px;
+                  }
+              
+                  .textos-header h2{
+                      font-size: 20px;
+                  }
+
+
+
+
+                  
+
+
+              
+                  /*  contenedor ABOUT US */
+              
+                  .imagen-about-us{
+                      margin-bottom: 60px;
+                      width: 99%;
+                  } 
+              
+                  .sobre-nosotros .contenido-textos{
+                        width: 95%;
+                    }
+                
+                    /* Clientes */
+
+                
+                    .cards .card{
+                        height: 450px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                
+                    .cards .card img{
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    
+                  .contenedor-footer{
+                   flex-direction: column;
+                   border: none;
+                    }
+
+                        .content-foo{
+                        margin-bottom: 20px;
+                        text-align: center;
+                  }
+
+                  .content-foo h4{
+                        border: none;
+                  }
+
+                  .content-foo p{
+                        color: #ccc;
+                        border-bottom: 1px solid #f2f2f2;
+                        padding-bottom: 20px;
+                  }
+
+                  }
+
+                  .flogo img{
+                    left: 50%;
+                  }
+
+
+                  /* =========================================
+   DISEÑO RESPONSIVE (Móvil y Tablet)
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* 1. HEADER: Ajuste de textos y logo */
+    .texto-header .line {
+        font-size: 2em; 
+        width: auto;    
+        white-space: normal; 
+        border-right: none;  
+        text-align: center;
+    }
+
+    .header2 {
+        font-size: 1rem;
+        width: 90%;
+        top: 60%;
+    }
+
+    .logo {
+        width: 80%;       /* El logo se adapta al ancho */
+        max-width: 400px;
+        height: auto;
+        opacity: 0.2;     
+    }
+
+    /* 2. MENÚ: Ajuste del botón flotante */
+    .menu {
+        transform: scale(0.8); 
+        bottom: 10px;
+        right: 10px;
+    }
+
+    /* 3. SOBRE NOSOTROS: De fila a columna */
+    .contenedor-sobre-nosotros {
+        flex-direction: column; 
+        align-items: center;
+        height: auto; 
+    }
+
+    .imagen-nosotros img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .sobre-nosotros .contenido-texto {
+        width: 90%;
+        text-align: center;
+    }
+
+    .contenido-texto p {
+        text-align: left; 
+    }
+
+    /* Tarjetas verticales */
+    .servicio-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio-ind {
+        width: 90%; 
+        margin-bottom: 40px;
+    }
+
+    /*Testimonios uno bajo otro*/
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .cards .card, 
+    .cards .card2 {
+        width: 90%; 
+        height: auto; 
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .cards .card img, 
+    .cards .card2 img {
+        margin-bottom: 15px; 
+    }
+
+    /* PORTAFOLIO (Slider) */
+    .slider {
+        height: 300px; 
+    }
+    
+    /* FOOTER: Columnas verticales */
+    .contenedor-footer {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    #slider {
+            height: 60vh; 
+        }
+
+    .texto-header {
+        width: 90%;
+    }
+
+    .imagen-nosotros {
+        width: 100%;           
+        display: flex;           
+        justify-content: center; 
+        margin-bottom: 30px;     
+    }
+
+    .imagen-nosotros img {
+        width: 250px;  
+        height: 250px; 
+    }
+}
