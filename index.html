@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--Programado por: Angel Martin Morales Haro-->
-<!--Pagina de prueba-->
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffe Bread</title>
-    <!--Fuentes de Texto-->
+    <title>Coffee Bread</title>
     <link rel="stylesheet" href="Diseño.css">
     <link rel="icon" href="IMG/ultimatelogo.png">
-    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&family=Montserrat+Subrayada&display=swap" rel="stylesheet">
@@ -26,45 +23,44 @@
 </head>
 <body>
     <header>
-        <!--Boton de navegacion-->
-    <div class="menu">
-        <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
-        <li style="--i:0;">
-            <a href="#slider"><ion-icon name="home-outline"></ion-icon></a>
-        </li>
-        <li style="--i:1;">
-            <a href="#nosotros"><ion-icon name="body-outline"></ion-icon></a>
-        </li>
-        <li style="--i:2;">
-            <a href="#videos"><ion-icon name="videocam-outline"></ion-icon></a>
-        </li>
-        <li style="--i:3;">
-            <a href="#portafolio"><ion-icon name="images-outline"></ion-icon></a>
-        </li>
-        <li style="--i:4;">
-            <a href="#clientes"><ion-icon name="people-outline"></ion-icon></a>
-        </li>
-        <li style="--i:5;">
-            <a href="#servicio"><ion-icon name="camera-outline"></ion-icon></a>
-        </li>
-        <li style="--i:6;">
-            <a href="#contacto"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-        </li>
-        <li style="--i:7;">
-            <a href="Formulario_AM/Formulario.html"><ion-icon name="folder-outline"></ion-icon></a>
-        </li>
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <!--Script de boton de navegacion-->
-    <script>
-        let toggle = document.querySelector('.toggle')
-        let menu = document.querySelector('.menu')
-        toggle.onclick = function(){
-            menu.classList.toggle('active')
-        }
-    </script>
-        <!--Slider Header-->
+        <div class="menu">
+            <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+            <li style="--i:0;">
+                <a href="#slider"><ion-icon name="home-outline"></ion-icon></a>
+            </li>
+            <li style="--i:1;">
+                <a href="#nosotros"><ion-icon name="body-outline"></ion-icon></a>
+            </li>
+            <li style="--i:2;">
+                <a href="#videos"><ion-icon name="videocam-outline"></ion-icon></a>
+            </li>
+            <li style="--i:3;">
+                <a href="#portafolio"><ion-icon name="images-outline"></ion-icon></a>
+            </li>
+            <li style="--i:4;">
+                <a href="#clientes"><ion-icon name="people-outline"></ion-icon></a>
+            </li>
+            <li style="--i:5;">
+                <a href="#servicio"><ion-icon name="camera-outline"></ion-icon></a>
+            </li>
+            <li style="--i:6;">
+                <a href="#contacto"><ion-icon name="chatbubbles-outline"></ion-icon></a>
+            </li>
+            <li style="--i:7;">
+                <a href="Formulario_AM/Formulario.html"><ion-icon name="folder-outline"></ion-icon></a>
+            </li>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+        <script>
+            let toggle = document.querySelector('.toggle')
+            let menu = document.querySelector('.menu')
+            toggle.onclick = function(){
+                menu.classList.toggle('active')
+            }
+        </script>
+        
         <div id="slider">
             <figure>
                 <img src="IMG/Portafolio7.jpg">
@@ -73,13 +69,12 @@
                 <img src="IMG/Woods.jpg">
                 <img src="IMG/shop.jpg">
             </figure>
-                <!--Logo y titulo de pagina-->
             <div class="texto-header">
-                <p class="line">Pagina de Muestra</p>
+                <p class="line">Página de Muestra</p>
             </div>
             <div class="logo"><img src="IMG/ultimatelogo.png" alt=""></div>
         </div>
-            <!--Index de pagina-->
+        
         <nav id="inicio">
             <a href="#slider" id="enlace-inicio" class="btn-header">Inicio</a>
             <a href="#nosotros" id="enlace-nosotros" class="btn-header">Nosotros</a>
@@ -88,9 +83,9 @@
             <a href="#clientes" id="enlace-clientes" class="btn-header">Clientes</a>
             <a href="#servicio" id="enlace-servicio" class="btn-header">Servicio</a>
             <a href="#contacto" id="enlace-contactos" class="btn-header">Contacto</a>
-            <a href="Formulario_AM/Formulario.html">Suscribete</a>
+            <a href="Formulario_AM/Formulario.html">Suscríbete</a>
         </nav>
-            <!--Animacion wave de header-->
+        
         <div id="wavess">
             <div class="wave wave1"></div>
             <div class="wave wave2"></div>
@@ -98,43 +93,40 @@
             <div class="wave wave4"></div>
         </div>
     </header>
-        <!--Seccion sobre nosotros-->
-        <main>
-            <section class="sobre-nosotros" id="nosotros">
-                <br>
-                <h2 class="titulo">Nuestro Producto</h2>
-                <div class="contenedor-sobre-nosotros">
-                    <div class="imagen-nosotros"><img src="IMG/Coffe2.jpg" alt=""></div>
-                    <div class="contenido-texto">
-                        <h3><span>1</span>Las Mejor Cafeteria</h3>
-                        <p>
-                            Seleccionamos granos de altura y los tostamos artesanalmente <br>
-                            para ofrecerte un aroma intenso y un sabor inigualable en cada taza. <br>
-                            La calidad es nuestra firma. <br>
-                        </p>
-                        <br>
-                        <h3><span>2</span>Tu Segundo Hogar</h3>
-                        <p>
-                            Más que una cafetería, somos tu refugio. Un espacio diseñado con<br>
-                            iluminación cálida y música suave para que te relajes, trabajes <br>
-                            o compartas momentos inolvidables con amigos.<br>
-
-                        </p>
-                    </div>
+    
+    <main>
+        <section class="sobre-nosotros" id="nosotros">
+            <br>
+            <h2 class="titulo">Nuestro Producto</h2>
+            <div class="contenedor-sobre-nosotros">
+                <div class="imagen-nosotros"><img src="IMG/Coffe2.jpg" alt=""></div>
+                <div class="contenido-texto">
+                    <h3><span>1</span>La Mejor Cafetería</h3>
+                    <p>
+                        Seleccionamos granos de altura y los tostamos artesanalmente <br>
+                        para ofrecerte un aroma intenso y un sabor inigualable en cada taza. <br>
+                        La calidad es nuestra firma. <br>
+                    </p>
+                    <br>
+                    <h3><span>2</span>Tu Segundo Hogar</h3>
+                    <p>
+                        Más que una cafetería, somos tu refugio. Un espacio diseñado con<br>
+                        iluminación cálida y música suave para que te relajes, trabajes <br>
+                        o compartas momentos inolvidables con amigos.<br>
+                    </p>
                 </div>
-            </section>
-                <!--Seccion videos-->
-            <section class="video" id="videos">
-                <div class="titulov"><p>Nuestra preparacion</p></div>
-                <div class="proyecto" id="proyectos ">
-                    <iframe class="videop" width="560" height="315" src="https://www.youtube.com/embed/YxK7me1EsUg?si=QJSlLMWLEeFt2P74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </section>
-                <!--Seccion de portafolio-->
-            <section class="contenedor-portafolio" id="portafolio">
-                
-                <h2 class="titulog">Portafolio</h2>
-
+            </div>
+        </section>
+        
+        <section class="video" id="videos">
+            <div class="titulov"><p>Nuestra preparación</p></div>
+            <div class="proyecto" id="proyectos ">
+                <iframe class="videop" width="560" height="315" src="https://www.youtube.com/embed/YxK7me1EsUg?si=QJSlLMWLEeFt2P74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section class="contenedor-portafolio" id="portafolio">
+            <h2 class="titulog">Portafolio</h2>
             <div class="slider">
                 <div class="slide">
                     <input type="radio" name="radio-btn" id="radio1">
@@ -150,7 +142,7 @@
                         <img src="IMG/Portafolio1.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -158,7 +150,7 @@
                         <img src="IMG/Portafolio2.png" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -166,7 +158,7 @@
                         <img src="IMG/Portafolio3.jpeg" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -174,7 +166,7 @@
                         <img src="IMG/Portafolio4.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -182,7 +174,7 @@
                         <img src="IMG/Portafolio5.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -190,7 +182,7 @@
                         <img src="IMG/Portafolio6.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -198,7 +190,7 @@
                         <img src="IMG/Portafolio7.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="IMG/icon.png" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
@@ -206,28 +198,25 @@
                         <img src="IMG/Portafolio8.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="" alt="">
-                            <P>Nuestro Trabajo</P>
+                            <p>Nuestro Trabajo</p>
                         </div>
                     </div>
     
-                        <div class="nav-auto">
-                            <div class="a-b1">
-                                <div class="hover-galeria">
-                                    <img src="IMG/icon.png" alt="">
-                                    <P>Nuestro Trabajo</P>
-                                </div>
+                    <div class="nav-auto">
+                        <div class="a-b1">
+                            <div class="hover-galeria">
+                                <img src="IMG/icon.png" alt="">
+                                <p>Nuestro Trabajo</p>
                             </div>
-                            <div class="a-b2"></div>
-                            <div class="a-b3"></div>
-                            <div class="a-b4"></div>
-                            <div class="a-b5"></div>
-                            <div class="a-b6"></div>
-                            <div class="a-b7"></div>
-                            <div class="a-b8"></div>
                         </div>
-
-
-    
+                        <div class="a-b2"></div>
+                        <div class="a-b3"></div>
+                        <div class="a-b4"></div>
+                        <div class="a-b5"></div>
+                        <div class="a-b6"></div>
+                        <div class="a-b7"></div>
+                        <div class="a-b8"></div>
+                    </div>
                 </div>
                 <div class="nav-m">
                     <label for="radio1" class="m-btn"></label>
@@ -240,105 +229,98 @@
                     <label for="radio8" class="m-btn"></label>      
                 </div>
             </div>
-
-            </section>
-                <!--Seccion clientes-->
-            <section class="clientes-contenedor" id="clientes">
-                <p class="tituloc">Lo que dicen nuestros clientes</p>
-                <div class="cards">
-                    <div class="card">
-                    <img src="IMG/persona11.jpg" alt="">
-                    <div class="contenido-card">
-                        <h4>Carlos y Fer</h4>
-                        <p>
-                            "Coffee Bread es perfecto para pasarla juntos.<br>
-                            La atmósfera, el color y la iluminación <br>
-                            tienen esa magia que nos gusta cuando salimos a citas. <br>
-
-                        </p>
-                    </div>
-                    </div>
-
-                <div class="card2">
-                    <img src="IMG/persona12.jpg" alt="">
-                    <div class="contenido-card">
-                        <h4>Ana</h4>
-                        <p>
-                            "Es un lugar único. Entienden esa estética <br>
-                            acogedora que tanto busco. <br>
-                            Su café negro es tan delicioso<br>
-                            hace que sea mas facil mi dia
-
-                        </p>
-                    </div>
+        </section>
+        
+        <section class="clientes-contenedor" id="clientes">
+            <p class="tituloc">Lo que dicen nuestros clientes</p>
+            <div class="cards">
+                <div class="card">
+                <img src="IMG/persona11.jpg" alt="">
+                <div class="contenido-card">
+                    <h4>Carlos y Fer</h4>
+                    <p>
+                        "Coffee Bread es perfecto para pasarla juntos.<br>
+                        La atmósfera, el color y la iluminación <br>
+                        tienen esa magia que nos gusta cuando salimos a citas." <br>
+                    </p>
                 </div>
                 </div>
-            </section>
 
-            <section class="acerca-de" id="servicio">
-                <div class="contenedor">
-                    <h2 class="titulo"> Nuestro servicio</h2>
-                    <div class="servicio-cont">
-                        <div class="servicio-ind">
-                            <img src="IMG/estadistica.png" alt="">
-                            <div class="cont-text">
-                            <h3>Reuniones</h3>
-                            
-                            <p>
-                                Llevamos el sabor de Coffee Bread a tus reuniones. <br>
-                                Ofrecemos charolas de pan recién horneado <br>
-                                y termos de café para tus juntas o fiestas.
-                            </p>
-                        </div>
-                        </div>
-
-                        <div class="servicio-ind">
-                            <img src="IMG/comunicacion.png" alt="">
-                            <div class="cont-text">
-                            <h3>Comunicacion</h3>
-                            <p>
-                                Disfruta de conexión WiFi de alta velocidad <br>
-                                y enchufes en cada mesa. El lugar ideal <br>
-                                para inspirarte y trabajar con un buen café.
-                            </p>
-                        </div>
-                        </div>
-
-                        <div class="servicio-ind">
-                            <img src="IMG/vamos.png" alt="">
-                            <div class="cont-text">
-                            <h3>Vamos mas alla</h3>
-                            <p>
-                                ¿No puedes venir? Nosotros vamos a ti. <br>
-                                Haz tu pedido desde nuestra web y <br>
-                                recibe tu desayuno calientito en minutos.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-            <!--Footer-->
-        <footer id="contacto">
-            <div class="contenedor-footer">
-                <div class="content-foot">
-                    <h4>Telefono</h4>
-                    <p>-- -- -- --</p>
-                </div>
-                <div class="content-foot">
-                    <h4>Email</h4>
-                    <p>angelmartinharo@GMAIL.COM</p>
-                </div>
-                <div class="content-foot">
-                    <h4>Direccion </h4>
-                    <p>-----------</p>
+            <div class="card2">
+                <img src="IMG/persona12.jpg" alt="">
+                <div class="contenido-card">
+                    <h4>Ana</h4>
+                    <p>
+                        "Es un lugar único. Entienden esa estética <br>
+                        acogedora que tanto busco. <br>
+                        Su café negro es tan delicioso,<br>
+                        hace que sea más fácil mi día."
+                    </p>
                 </div>
             </div>
-            <H2 class="titulo-final"> &copy: martyx64 2025</H2>
-            
-        </footer>
+            </div>
+        </section>
 
+        <section class="acerca-de" id="servicio">
+            <div class="contenedor">
+                <h2 class="titulo"> Nuestro servicio</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <img src="IMG/estadistica.png" alt="">
+                        <div class="cont-text">
+                        <h3>Reuniones</h3>
+                        <p>
+                            Llevamos el sabor de Coffee Bread a tus reuniones. <br>
+                            Ofrecemos charolas de pan recién horneado <br>
+                            y termos de café para tus juntas o fiestas.
+                        </p>
+                    </div>
+                    </div>
 
+                    <div class="servicio-ind">
+                        <img src="IMG/comunicacion.png" alt="">
+                        <div class="cont-text">
+                        <h3>Comunicación</h3>
+                        <p>
+                            Disfruta de conexión WiFi de alta velocidad <br>
+                            y enchufes en cada mesa. El lugar ideal <br>
+                            para inspirarte y trabajar con un buen café.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="servicio-ind">
+                        <img src="IMG/vamos.png" alt="">
+                        <div class="cont-text">
+                        <h3>Vamos más allá</h3>
+                        <p>
+                            ¿No puedes venir? Nosotros vamos a ti. <br>
+                            Haz tu pedido desde nuestra web y <br>
+                            recibe tu desayuno calientito en minutos.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contacto">
+        <div class="contenedor-footer">
+            <div class="content-foot">
+                <h4>Teléfono</h4>
+                <p>-- -- -- --</p>
+            </div>
+            <div class="content-foot">
+                <h4>Email</h4>
+                <p>angelmartinharo@gmail.com</p>
+            </div>
+            <div class="content-foot">
+                <h4>Dirección </h4>
+                <p>-----------</p>
+            </div>
+        </div>
+        <h2 class="titulo-final"> &copy; martyx64 2025</h2>
+    </footer>
 </body>
 </html>
